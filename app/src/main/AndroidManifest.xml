@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.muhammadali.udemy.jetpack.navigation.MainActivity">
+        <activity android:name="com.muhammadali.udemy.jetpack.navigation.views.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
