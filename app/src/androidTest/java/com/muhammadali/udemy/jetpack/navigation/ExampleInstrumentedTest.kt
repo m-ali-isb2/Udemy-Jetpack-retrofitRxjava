@@ -1,4 +1,4 @@
-package com.muhammadali.udemy.jetpack.setup
+package com.muhammadali.udemy.jetpack.navigation
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

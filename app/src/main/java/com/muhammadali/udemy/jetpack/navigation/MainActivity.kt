@@ -1,4 +1,4 @@
-package com.muhammadali.udemy.jetpack.setup
+package com.muhammadali.udemy.jetpack.navigation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
