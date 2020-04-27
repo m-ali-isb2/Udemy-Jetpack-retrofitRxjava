@@ -1,4 +1,4 @@
-package com.muhammadali.udemy.jetpack.navigation
+package com.muhammadali.udemy.jetpack.mvvmLiveData
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

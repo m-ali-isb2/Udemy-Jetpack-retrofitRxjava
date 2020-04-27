@@ -1,4 +1,4 @@
-package com.muhammadali.udemy.jetpack.navigation.views
+package com.muhammadali.udemy.jetpack.mvvmLiveData.views
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,9 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavDirections
 import androidx.navigation.Navigation
-import com.muhammadali.udemy.jetpack.navigation.R
+import com.muhammadali.udemy.jetpack.mvvmLiveData.R
 import kotlinx.android.synthetic.main.fragment_detail.*
-import kotlinx.android.synthetic.main.fragment_list.*
 
 
 /**
