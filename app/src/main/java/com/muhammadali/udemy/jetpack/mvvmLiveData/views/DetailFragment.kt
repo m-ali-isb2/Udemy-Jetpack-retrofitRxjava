@@ -31,16 +31,16 @@ class DetailFragment : Fragment() {
         //retrieving Argument
         arguments?.let {
             dogUuid = DetailFragmentArgs.fromBundle(it).dogUuid
-            detailText.text = dogUuid.toString()
+//            detailText.text = dogUuid.toString()
 
         }
-
-        buttonList.setOnClickListener {
-            val action: NavDirections =
-                DetailFragmentDirections.actionDetailFragmentToListFragment()
-            Navigation.findNavController(it).navigate(action)
-
-        }
+//
+//        buttonList.setOnClickListener {
+//            val action: NavDirections =
+//                DetailFragmentDirections.actionDetailFragmentToListFragment()
+//            Navigation.findNavController(it).navigate(action)
+//
+//        }
     }
 
 }
