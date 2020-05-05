@@ -9,7 +9,7 @@ android {
     buildToolsVersion "29.0.2"
 
     defaultConfig {
-        applicationId "com.muhammadali.udemy.jetpack.mvvmLiveData"
+        applicationId "com.muhammadali.udemy.jetpack.retrofitrxjava"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 1

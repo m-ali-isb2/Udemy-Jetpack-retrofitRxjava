@@ -1,4 +1,4 @@
-package com.muhammadali.udemy.jetpack.mvvmLiveData.model
+package com.muhammadali.udemy.jetpack.retrofitrxjava.model
 
 import android.os.Parcel
 import android.os.Parcelable

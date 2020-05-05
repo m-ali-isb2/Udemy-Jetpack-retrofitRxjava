@@ -1,9 +1,8 @@
-package com.muhammadali.udemy.jetpack.mvvmLiveData.viewModel
+package com.muhammadali.udemy.jetpack.retrofitrxjava.viewModel
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.muhammadali.udemy.jetpack.mvvmLiveData.model.DogBreed
+import com.muhammadali.udemy.jetpack.retrofitrxjava.model.DogBreed
 
 /**
  * Created by Muhammad Ali on 05-May-20.

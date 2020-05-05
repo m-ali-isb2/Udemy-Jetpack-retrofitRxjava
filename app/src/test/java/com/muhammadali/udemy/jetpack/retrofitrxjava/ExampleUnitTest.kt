@@ -1,4 +1,4 @@
-package com.muhammadali.udemy.jetpack.mvvmLiveData
+package com.muhammadali.udemy.jetpack.retrofitrxjava
 
 import org.junit.Test
 

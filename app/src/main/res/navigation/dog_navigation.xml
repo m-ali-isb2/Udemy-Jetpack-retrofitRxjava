@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.muhammadali.udemy.jetpack.mvvmLiveData.views.ListFragment"
+        android:name="com.muhammadali.udemy.jetpack.retrofitrxjava.views.ListFragment"
         android:label="ListFragment">
         <action
             android:id="@+id/action_listFragment_to_detailFragment"
@@ -14,7 +14,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.muhammadali.udemy.jetpack.mvvmLiveData.views.DetailFragment"
+        android:name="com.muhammadali.udemy.jetpack.retrofitrxjava.views.DetailFragment"
         android:label="DetailFragment">
         <action
             android:id="@+id/action_detailFragment_to_listFragment"

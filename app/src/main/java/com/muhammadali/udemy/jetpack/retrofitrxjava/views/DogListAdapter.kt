@@ -1,12 +1,12 @@
-package com.muhammadali.udemy.jetpack.mvvmLiveData.views
+package com.muhammadali.udemy.jetpack.retrofitrxjava.views
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import com.muhammadali.udemy.jetpack.mvvmLiveData.R
-import com.muhammadali.udemy.jetpack.mvvmLiveData.model.DogBreed
+import com.muhammadali.udemy.jetpack.retrofitrxjava.R
+import com.muhammadali.udemy.jetpack.retrofitrxjava.model.DogBreed
 import kotlinx.android.synthetic.main.item_dog.view.*
 
 /**

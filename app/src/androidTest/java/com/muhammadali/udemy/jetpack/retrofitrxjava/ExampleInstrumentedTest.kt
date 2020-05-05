@@ -1,4 +1,4 @@
-package com.muhammadali.udemy.jetpack.mvvmLiveData
+package com.muhammadali.udemy.jetpack.retrofitrxjava
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

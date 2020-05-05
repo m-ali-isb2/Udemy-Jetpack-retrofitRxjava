@@ -1,11 +1,11 @@
-package com.muhammadali.udemy.jetpack.mvvmLiveData.views
+package com.muhammadali.udemy.jetpack.retrofitrxjava.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
-import com.muhammadali.udemy.jetpack.mvvmLiveData.R
+import com.muhammadali.udemy.jetpack.retrofitrxjava.R
 
 
 /**

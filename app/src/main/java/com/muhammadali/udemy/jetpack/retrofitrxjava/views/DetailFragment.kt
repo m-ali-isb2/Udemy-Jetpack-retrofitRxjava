@@ -1,4 +1,4 @@
-package com.muhammadali.udemy.jetpack.mvvmLiveData.views
+package com.muhammadali.udemy.jetpack.retrofitrxjava.views
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,15 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.NavDirections
-import androidx.navigation.Navigation
-import com.muhammadali.udemy.jetpack.mvvmLiveData.R
-import com.muhammadali.udemy.jetpack.mvvmLiveData.model.DogBreed
-import com.muhammadali.udemy.jetpack.mvvmLiveData.viewModel.DetailViewModel
+import com.muhammadali.udemy.jetpack.retrofitrxjava.R
+import com.muhammadali.udemy.jetpack.retrofitrxjava.model.DogBreed
+import com.muhammadali.udemy.jetpack.retrofitrxjava.viewModel.DetailViewModel
 import kotlinx.android.synthetic.main.detail_layout.*
-import kotlinx.android.synthetic.main.fragment_detail.*
 
 
 /**
