@@ -2,17 +2,24 @@ package com.muhammadali.udemy.jetpack.retrofitrxjava.model
 
 import android.os.Parcel
 import android.os.Parcelable
+import com.google.gson.annotations.SerializedName
 
 /**
  * Created by Muhammad Ali on 29-Apr-20.
  * Email muhammad.ali9385@gmail.com
  */
 data class DogBreed(
+    @SerializedName("id")
     val id: String? = null,
+    @SerializedName("name")
     val breed: String? = null,
+    @SerializedName("life_span")
     val lifespan: String? = null,
+    @SerializedName("breed_group")
     val breedGroup: String? = null,
+    @SerializedName("temperament")
     val temperament: String? = null,
+    @SerializedName("url")
     val image: String? = null
 ) : Parcelable {
     constructor(parcel: Parcel) : this(

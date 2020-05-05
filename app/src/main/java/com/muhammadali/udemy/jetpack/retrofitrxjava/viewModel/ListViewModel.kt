@@ -3,43 +3,56 @@ package com.muhammadali.udemy.jetpack.retrofitrxjava.viewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.muhammadali.udemy.jetpack.retrofitrxjava.model.DogBreed
+import com.muhammadali.udemy.jetpack.retrofitrxjava.model.DogsService
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.observers.DisposableSingleObserver
+import io.reactivex.schedulers.Schedulers
 
 /**
  * Created by Muhammad Ali on 04-May-20.
  * Email muhammad.ali9385@gmail.com
  */
-class ListViewModel:ViewModel {
+class ListViewModel : ViewModel() {
+
+    private val dogsService = DogsService()
+    private val disposable = CompositeDisposable()
+
 
     val dogs = MutableLiveData<List<DogBreed>>()
     val error = MutableLiveData<Boolean>()
     val loading = MutableLiveData<Boolean>()
-    var dogList = ArrayList<DogBreed>()
-    var dogList2 = ArrayList<DogBreed>()
-
-    constructor() {
-        dummyData()
-    }
-
-
-    fun dummyData() {
-        val dogBreed1 = DogBreed("1", "GermanShepherd", "10", "unknown", "Normal", "")
-        val dogBreed2 = DogBreed("2", "Pointer", "12", "unknown", "High", "")
-        val dogBreed3 = DogBreed("3", "Bully", "14", "unknown", "Low", "")
-
-        dogList = arrayListOf<DogBreed>(dogBreed1, dogBreed2, dogBreed3)
-    }
 
     fun refresh() {
-
-        dogList2.clear()
-        for (i in 0..2) {
-            dogList2?.add(dogList[(0..2).random()])
-        }
-
-        dogs.value = dogList2
-        error.value = false
-        loading.value = false
-
+        fetchFromRemote()
     }
 
+    fun fetchFromRemote() {
+        loading.value = true
+        disposable.add(
+            dogsService.getDogs()
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object : DisposableSingleObserver<List<DogBreed>>() {
+                    override fun onSuccess(t: List<DogBreed>) {
+                        dogs.value = t
+                        error.value = false
+                        loading.value = false
+
+                    }
+
+                    override fun onError(e: Throwable) {
+                        error.value = true
+                        loading.value = false
+                        e.printStackTrace()
+                    }
+
+                })
+        )
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        disposable.clear()
+    }
 }
