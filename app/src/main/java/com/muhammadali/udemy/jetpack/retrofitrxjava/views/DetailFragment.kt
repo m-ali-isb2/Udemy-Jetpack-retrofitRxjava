@@ -9,8 +9,15 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.muhammadali.udemy.jetpack.retrofitrxjava.R
 import com.muhammadali.udemy.jetpack.retrofitrxjava.model.DogBreed
+import com.muhammadali.udemy.jetpack.retrofitrxjava.utils.getProgressDrawable
+import com.muhammadali.udemy.jetpack.retrofitrxjava.utils.loadImage
 import com.muhammadali.udemy.jetpack.retrofitrxjava.viewModel.DetailViewModel
 import kotlinx.android.synthetic.main.detail_layout.*
+import kotlinx.android.synthetic.main.detail_layout.body
+import kotlinx.android.synthetic.main.detail_layout.name
+import kotlinx.android.synthetic.main.item_dog.*
+import kotlinx.android.synthetic.main.item_dog.view.*
+import kotlinx.android.synthetic.main.item_dog.view.image
 
 
 /**
@@ -57,6 +64,8 @@ class DetailFragment : Fragment() {
                 purpose.text = it.breedGroup
                 temperament.text = it.temperament
                 body.text = it.lifespan
+                icon.loadImage(it.image, getProgressDrawable(icon.context))
+
             }
         })
     }
