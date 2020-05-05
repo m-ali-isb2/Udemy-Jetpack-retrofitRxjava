@@ -20,9 +20,8 @@
             android:id="@+id/action_detailFragment_to_listFragment"
             app:destination="@id/listFragment" />
         <argument
-            android:name="dogUuid"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:name="dogBreed"
+            app:argType="com.muhammadali.udemy.jetpack.mvvmLiveData.model.DogBreed" />
 
     </fragment>
 </navigation>

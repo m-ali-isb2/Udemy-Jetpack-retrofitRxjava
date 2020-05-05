@@ -3,6 +3,7 @@ package com.muhammadali.udemy.jetpack.mvvmLiveData.views
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.muhammadali.udemy.jetpack.mvvmLiveData.R
 import com.muhammadali.udemy.jetpack.mvvmLiveData.model.DogBreed
@@ -29,6 +30,10 @@ class DogListAdapter(val dogBreedList: ArrayList<DogBreed>) :
     override fun onBindViewHolder(holder: DogViewHolder, position: Int) {
         holder.view.name.text = dogBreedList.get(position).breed
         holder.view.body.text = dogBreedList.get(position).lifespan
+        holder.view.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(ListFragmentDirections.actionListFragmentToDetailFragment(dogBreedList[position]))
+        }
     }
 
     fun updateDogList(dogBreedList: ArrayList<DogBreed>) {
